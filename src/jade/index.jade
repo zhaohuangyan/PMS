@@ -18,7 +18,7 @@ block content
                     li New Page 3
             //.col-xs-9
             .PMS-right
-                h4 商家注册
+                h3 商家注册
                 p.PMS-bg 基础信息设置
                 p.PMS-jcxx 
                     b 商家编码
@@ -80,12 +80,12 @@ block content
                     span.fa.fa-angle-double-down.fa-2x.PMS-img#PMSaddshow
                     span.fa.fa-angle-double-up.fa-2x.PMS-imgs#PMSaddshows
                 div.PMS-addall#PMSadd
-                    h4 商家名称:拼多多
+                    b 商家名称:拼多多
                     div.PMS-addk
                         div.PMS-add
                             span.fa.fa-plus-square(onclick="PMSopen()")
                                 &#160;新增
-                            span.fa.fa-play
+                            span.fa.fa-play(id="PMSstart")
                                 &#160;启用
                             span.fa.fa-pause(id="PMSstop")
                                 &#160;停用
@@ -93,45 +93,35 @@ block content
                                 &#160;返回
                         table.PMS-table
                             tr
-                                th 序号
-                                th 选择
-                                th 操作
-                                th 商家名称
-                                th 仓库编码
-                                th 仓库名称
-                                th 省份
-                                th 城市
-                                th 区县
-                                th 仓库地址
-                                th 启用状态
+                                th.PMS-th 序号
+                                th.PMS-th 选择
+                                th.PMS-th 操作
+                                th.PMS-th 商家名称
+                                th.PMS-th 仓库编码
+                                th.PMS-th 仓库名称
+                                th.PMS-th 省份
+                                th.PMS-th 城市
+                                th.PMS-th 区县
+                                th.PMS-th 仓库地址
+                                th.PMS-th 启用状态
                             tr
-                                td 1
-                                td 
-                                    input(type="checkbox",name="stop")
-                                td 修改
-                                td 拼多多
-                                td pddbjkf01
-                                td 北京库房
-                                td 北京
-                                td 北京市
-                                td 西城区
-                                td 北京
-                                td 可用
+                                td.PMS-td 1
+                                td.PMS-td 
+                                    input(type="checkbox",name="stop",class="PMS-choice")
+                                td.PMS-td 修改
+                                td.PMS-td 拼多多
+                                td.PMS-td pddbjkf01
+                                td.PMS-td 北京库房
+                                td.PMS-td 北京
+                                td.PMS-td 北京市
+                                td.PMS-td 西城区
+                                td.PMS-td 北京
+                                td.PMS-td.PMS-state 可用
                 br
                 .PMS-bg 系统数据设置
                     span.fa.fa-angle-double-down.fa-2x.PMS-img#PMSshow
                     span.fa.fa-angle-double-up.fa-2x.PMS-imgs#PMSshows
                 div.PMS-addall#PMSname
-                    //- span.PMS-check
-                    //-     input(type="checkbox",name="data")
-                    //-     |是否显示姓名
-                    //- span.PMS-check
-                    //-     input(type="checkbox",name="data")
-                    //-     |是否显示姓名
-                    //- br
-                    //- span.PMS-check
-                    //-     input(type="checkbox",name="data")
-                    //-     |是否显示姓名
                     table
                         tr
                             td.PMS-check
@@ -148,28 +138,7 @@ block content
                 .PMS-bg 其它设置
                     span.fa.fa-angle-double-down.fa-2x.PMS-img#PMSother
                     span.fa.fa-angle-double-up.fa-2x.PMS-imgs#PMSothers
-                    //- img(src="u66.png", alt="",class="PMS-img",id="PMSother")
-                    //- img(src="u66.png", alt="",class="PMS-imgs",id="PMSothers")
                 div.PMS-addall#PMSaddother
-                    //- span.PMS-check
-                    //-     input(type="checkbox")
-                    //-     |是否允许接口导入
-                    //- span.PMS-check
-                    //-     input(type="checkbox")
-                    //-     |预筛单模式
-                    //- span.PMS-check
-                    //-     input(type="checkbox")
-                    //-     |是否运单号=订单号
-                    //- br
-                    //- span.PMS-check
-                    //-     input(type="checkbox")
-                    //-     |称重复核
-                    //- span.PMS-check
-                    //-     input(type="checkbox")
-                    //-     |是否直接出库
-                    //- span.PMS-check
-                    //-     input(type="checkbox")
-                    //-     |是否在退货单打印菜单显示此商家
                     table
                         tr
                             td.PMS-check
@@ -196,38 +165,6 @@ block content
                     span.fa.fa-angle-double-down.fa-2x.PMS-img#PMScustom
                     span.fa.fa-angle-double-up.fa-2x.PMS-imgs#PMScustoms
                 div.PMS-addall#PMSaddcustom
-                    //- span.PMS-check
-                    //-     input(type="checkbox")
-                    //-     |允许POS机刷卡
-                    //- span.PMS-check
-                    //-     input(type="checkbox")
-                    //-     |允许他人签收
-                    //- span.PMS-check
-                    //-     input(type="checkbox")
-                    //-     |允许开商品自身包装验货
-                    //- span.PMS-check
-                    //-     input(type="checkbox")
-                    //-     |操作退货审核
-                    //- span.PMS-check
-                    //-     |配送优先级别
-                    //-     select
-                    //-         option
-                    //-         option
-                    //-     br
-                    //- span.PMS-check
-                    //-     input(type="checkbox")
-                    //-     |收集客户身份证后4位
-                    //- span.PMS-check
-                    //-     input(type="checkbox")
-                    //-     |允许开外包箱验货
-                    //- span.PMS-check
-                    //-     input(type="checkbox")
-                    //-     |允许试用、试穿
-                    //- span.PMS-check
-                    //-     |滞留几天退回
-                    //-     select
-                    //-         option
-                    //-         option
                     table
                         tr
                             td.PMS-check
@@ -244,7 +181,7 @@ block content
                                 |操作退货审核
                             td.PMS-check
                                 |配送优先级别
-                                select(class="PMS-zdy")
+                                select
                                     option
                                         |Ａ级（最紧急）
                                     option
@@ -264,7 +201,7 @@ block content
                             td
                             td.PMS-check
                                 |滞留几天退回
-                                select(class="PMS-zdy")
+                                select
                                     option
                                         |等客服指令
                                     option
@@ -277,77 +214,4 @@ block content
                                         |4天
                                     option
                                         |5天
-    script.
-        $(document).ready(function(){
-            $("#PMSaddshow").click(function(){
-                $("#PMSadd").show();
-                $("#PMSaddshow").hide();
-                $("#PMSaddshows").show();
-                });
-        })
-        $(document).ready(function(){
-            $("#PMSshow").click(function(){
-                $("#PMSname").show();
-                 $("#PMSshow").hide();
-                $("#PMSshows").show();
-                });
-        })
-        $(document).ready(function(){
-            $("#PMSother").click(function(){
-                $("#PMSaddother").show();
-                $("#PMSother").hide();
-                $("#PMSothers").show();
-                });
-        })
-        $(document).ready(function(){
-            $("#PMScustom").click(function(){
-                $("#PMSaddcustom").show();
-                $("#PMScustom").hide();
-                $("#PMScustoms").show();
-                });
-        })
-        $(document).ready(function(){
-            $("#PMSaddshows").click(function(){
-                $("#PMSadd").hide();
-                $("#PMSaddshows").hide();
-                $("#PMSaddshow").show();
-                });
-        })
-        $(document).ready(function(){
-            $("#PMSshows").click(function(){
-                $("#PMSname").hide();
-                $("#PMSshows").hide();
-                $("#PMSshow").show();
-                });
-        })
-        $(document).ready(function(){
-            $("#PMSothers").click(function(){
-                $("#PMSaddother").hide();
-                $("#PMSothers").hide();
-                $("#PMSother").show();
-                });
-        })
-        $(document).ready(function(){
-            $("#PMScustoms").click(function(){
-                $("#PMSaddcustom").hide();
-                $("#PMScustoms").hide();
-                $("#PMScustom").show();
-                });
-        })
-        $(document).ready(function(){
-            $('#PMSstop').click(function(){
-                if($('input[name="stop"]').prop("checked"))
-                {
-                    alert("停用成功!");
-                }
-                else
-                {
-                    alert("请选择停用仓库，谢谢!")
-                }
-                })
-            })
-        function PMSopen(){
-            window.open("add-warehouse.html","_blank","toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes, width=600, height=400,top=200,left=300")
-        }
-        
        

@@ -8,61 +8,63 @@ block title
 block styles
 
 block content
-    .add-all
-        //- b 商家名称:拼多多
-        //- br
-        //- b 仓库编码:
-        //- b.PMS-xing *
-        //- input(type="text",class="add-input")
-        //- br
-        //- b 省&#160;市&#160;&#160;区:
-        //- b.PMS-xing *
-        //- select(class="add-select")
-        //-     option
-        //- select(class="add-select")
-        //-     option
-        //- select(class="add-select")
-        //-     option
-        //- br
-        //- b 仓库地址:
-        //- b.PMS-xing *
-        //- input(type="text",class="add-address")
-        //- br
-        //- button(type="submit",class="add-btn1")提交
-        //- button(type="button",class="add-btn2")返回
-        table.add-table
-            tr.add-hang
-                td 
-                    b 商家名称：
-                td &#160;&#160;&#160;&#160;&#160;拼多多
-            tr.add-hang
-                td 
-                    b 仓库编码：
-                td
-                    span.PMS-xing *
-                    input(type="text",class="add-input",maxlength="20",placeholder="最大长度为20" )
-            tr.add-hang
-                td 
-                    b 仓库名称：
-                td
-                    span.PMS-xing *
-                    input(type="text",class="add-input",maxlength="50",placeholder="最大长度为50")
-            tr.add-hang
-                td 
-                    b 省&#160;&#160;市&#160;区：
-                td
-                    span.PMS-xing *
-                    select(class="add-select",id="province_Select")
-                        option --请选择--
-                    select(class="add-select",id="Province_city")
-                        option --请选择--
-                    select(class="add-select",id="Province_Area")
-                        option --请选择--
-            tr.add-hang
-                td 
-                    b 仓库地址：
-                td
-                    span.PMS-xing *
-                    input(type="text",class="add-address",maxlength="90",placeholder="最大长度为90")          
-        button(type="submit",class="add-btn1")提交
-        button(type="button",class="add-btn2")返回
+    .PMS-all
+        .add-all
+            //from
+            //- b 商家名称:拼多多
+            //- br
+            //- b 仓库编码:
+            //- b.PMS-xing *
+            //- input(type="text",class="add-input")
+            //- br
+            //- b 省&#160;市&#160;&#160;区:
+            //- b.PMS-xing *
+            //- select(class="add-select")
+            //-     option
+            //- select(class="add-select")
+            //-     option
+            //- select(class="add-select")
+            //-     option
+            //- br
+            //- b 仓库地址:
+            //- b.PMS-xing *
+            //- input(type="text",class="add-address")
+            //- br
+            //- button(type="submit",class="add-btn1")提交
+            //- button(type="button",class="add-btn2")返回
+            table.add-table
+                tr.add-hang
+                    td 
+                        b 商家名称：
+                    td &#160;&#160;&#160;&#160;&#160;拼多多
+                tr.add-hang
+                    td 
+                        b 仓库编码：
+                    td
+                        span.PMS-xing *
+                        input(type="text",class="add-input",maxlength="20",placeholder="最大长度为20" )
+                tr.add-hang
+                    td 
+                        b 仓库名称：
+                    td
+                        span.PMS-xing *
+                        input(type="text",class="add-input",maxlength="50",placeholder="最大长度为50")
+                tr.add-hang
+                    td 
+                        b 省&#160; 市&#160; 区：
+                    td
+                        span.PMS-xing *
+                        select(class="add-select",id="province_Select")
+                            option --请选择--
+                        select(class="add-select",id="Province_city")
+                            option --请选择--
+                        select(class="add-select",id="Province_Area")
+                            option --请选择--
+                tr.add-hang
+                    td 
+                        b 仓库地址：
+                    td
+                        span.PMS-xing *
+                        input(type="text",class="add-address",maxlength="90",placeholder="最大长度为90")          
+            button(type="submit",class="add-btn1")提交
+            button(type="button",class="add-btn2")返回

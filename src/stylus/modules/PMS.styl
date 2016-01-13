@@ -2,31 +2,43 @@
     width 100%
     height 100%
     white-space nowrap
-    margin-right 0
     font-size 16px
+    margin-bottom 10px
     .PMS-left
         float left
         width 400px
     .PMS-right
         margin-left 400px
 .PMS-bg
-    width 828px
+    width 854px
     background-color #00AE9B
     padding 5px
     color white
     position relative
+    .PMS-img,
+    .PMS-imgs
+        width 30px
+        position absolute
+        left 864px
+        color gray
+        top 0px
+        cursor pointer
+    .PMS-imgs
+        display none
 .PMS-jcxx
     text-indent 2em
 .PMS-select,
 .PMS-input,
 .add-input,
-.add-select
+.add-select,
+.add-address
     width 270px
     height 35px
     border-radius 4px
     border 1px solid gray
     margin-right 30px
     padding 5px
+    outline medium
 .PMS-select,
 .add-select
     background-color #EFEEEE
@@ -38,79 +50,51 @@
 .PMS-addall
     border 1px solid black
     padding 10px 20px
-    width 828px
-    height auto
+    width 854px
     margin 15px 0 0 0 
     display none
-    overflow hidden
 .PMS-addk
-    border 1px solid #00AE9B
-.PMS-add
-    background-color #00AE9B
-    color white
-    padding 1%
-    cursor pointer
+    border 1px solid #F89D30
+    margin-top 5px
+    .PMS-add
+        background-color #F9A94A
+        color white
+        padding 1%
+        cursor pointer
+        .fa-pause,
+        .fa-play,
+        .fa-repeat,
+        .fa-plus-square
+            margin-right 20px
 .PMS-table
     margin 1%
-    border 2px solid #DBDBDB
-    td
+    .PMS-td
         width 73px
-        background-color #DCDCDC
-    td,th
-        height 30px
+        background-color #E2E2E2
+    .PMS-td,
+    .PMS-th
         border 1px solid gray
-        padding 0.5% 0 0 0.5%
-.PMS-img
-    width 30px
-    position absolute
-    left 850px
-    color gray
-    top 0px
-    cursor pointer
-.PMS-imgs
-    width 30px
-    position absolute
-    left 850px
-    color gray
-    top 0px
-    cursor pointer
-    display none
+        padding 1% 0 0 0.5%
 .PMS-check
     width 150px
     font-size 14px
-.fa-pause,
-.fa-play
-    color #F00
-.fa-pause,
-.fa-play,
-.fa-repeat,
-.fa-plus-square
-    margin-right 20px
+    padding-bottom 5px
 .add-all
-    width 100%
-    height 100%
     padding 10%
-    font-size 16px 
-    white-space nowrap
+    .add-btn1,
+    .add-btn2
+        border-radius 5px
+        padding 5px 10px
+        color white
+        margin 10px 45px 0 0 
+        outline medium
     .add-btn1
         background-color #F9A94A
         border 2px solid #F89D30
-        border-radius 5px
-        padding 5px 10px
-        color white
     .add-btn2
         background-color #3386C9
         border 2px solid #2679B6
-        border-radius 5px
-        padding 5px 10px
-        color white
-        margin-left 45px
-        margin-top 10px
     .add-address
         width 350px
-        height 35px
-        padding 0.5%
-        border-radius 4px
-        border 1px solid gray
     .add-hang
         height 45px
