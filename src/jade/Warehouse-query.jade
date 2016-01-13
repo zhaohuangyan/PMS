@@ -1,0 +1,64 @@
+extends templates/pms
+
+block vars
+
+block title
+  | PMS新增页面
+
+block styles
+
+block content
+    .container.PMS-all
+        .row
+            //.col-xs-3
+            .PMS-left
+                ul
+                    li 商家维护查询页面
+                    li 商家维护新增页面
+                    li New Page 3
+            //.col-xs-9
+            .PMS-right
+                //- .PMS-bg 商家仓库查询
+                //-     span.fa.fa-angle-double-down.fa-2x.PMS-img#PMSaddshow
+                //-     span.fa.fa-angle-double-up.fa-2x.PMS-imgs#PMSaddshows
+                div.PMS-addall#PMSadd
+                    b 商家名称:拼多多
+                    div.PMS-addk
+                        div.PMS-add
+                            span.fa.fa-plus-square(onclick="PMSopen()")
+                                &#160;新增
+                            span.fa.fa-play(id="PMSstart")
+                                &#160;启用
+                            span.fa.fa-pause(id="PMSstop")
+                                &#160;停用
+                            span.fa.fa-repeat
+                                &#160;返回
+                        table.PMS-table
+                            tr
+                                th.PMS-th 序号
+                                th.PMS-th 选择
+                                th.PMS-th 操作
+                                th.PMS-th 商家名称
+                                th.PMS-th 仓库编码
+                                th.PMS-th 仓库名称
+                                th.PMS-th 省份
+                                th.PMS-th 城市
+                                th.PMS-th 区县
+                                th.PMS-th 仓库地址
+                                th.PMS-th 启用状态
+                            tr
+                                td.PMS-td 1
+                                td.PMS-td 
+                                    input(type="checkbox",name="stop",class="PMS-choice")
+                                td.PMS-td 修改
+                                td.PMS-td 拼多多
+                                td.PMS-td pddbjkf01
+                                td.PMS-td 北京库房
+                                td.PMS-td 北京
+                                td.PMS-td 北京市
+                                td.PMS-td 西城区
+                                td.PMS-td 北京
+                                td.PMS-td.PMS-state 可用
+    script.
+        $("#PMSadd").show()
+        $(".PMS-right").css("margin-top","20px")

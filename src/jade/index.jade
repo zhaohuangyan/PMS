@@ -83,7 +83,7 @@ block content
                     b 商家名称:拼多多
                     div.PMS-addk
                         div.PMS-add
-                            span.fa.fa-plus-square(onclick="PMSopen()")
+                            span.fa.fa-plus-square(onclick="PMSopen()",)
                                 &#160;新增
                             span.fa.fa-play(id="PMSstart")
                                 &#160;启用
@@ -107,7 +107,7 @@ block content
                             tr
                                 td.PMS-td 1
                                 td.PMS-td 
-                                    input(type="checkbox",name="stop",class="PMS-choice")
+                                    input(type="checkbox",name="stop")
                                 td.PMS-td 修改
                                 td.PMS-td 拼多多
                                 td.PMS-td pddbjkf01
@@ -181,14 +181,14 @@ block content
                                 |操作退货审核
                             td.PMS-check
                                 |配送优先级别
-                                select
+                                select(class="PMS-zdy")
                                     option
                                         |Ａ级（最紧急）
                                     option
                                         |Ｂ级（紧急）
                                     option
                                         |Ｃ级（正常）
-                        tr
+                        tr.PMS-addtr
                             td.PMS-check
                                 input(type="checkbox")
                                 |收集客户身份证后4位
@@ -201,7 +201,7 @@ block content
                             td
                             td.PMS-check
                                 |滞留几天退回
-                                select
+                                select(class="PMS-zdy")
                                     option
                                         |等客服指令
                                     option
@@ -214,4 +214,64 @@ block content
                                         |4天
                                     option
                                         |5天
-       
+    script.
+        $(document).ready(function(){
+            $("#PMSaddshow").click(function(){
+                $("#PMSadd").show();
+                $("#PMSaddshow").hide();
+                $("#PMSaddshows").show();
+                })
+            $("#PMSaddshows").click(function(){
+                $("#PMSadd").hide();
+                $("#PMSaddshow").show();
+                $("#PMSaddshows").hide();
+                })
+            $("#PMSshow").click(function(){
+                $("#PMSname").show();
+                $("#PMSshow").hide();
+                $("#PMSshows").show();
+                })
+            $("#PMSshows").click(function(){
+                $("#PMSname").hide();
+                $("#PMSshow").show();
+                $("#PMSshows").hide();
+                })
+            $("#PMSother").click(function(){
+                $("#PMSaddother").show();
+                $("#PMSother").hide();
+                $("#PMSothers").show();
+                })
+            $("#PMSothers").click(function(){
+                $("#PMSaddother").hide();
+                $("#PMSother").show();
+                $("#PMSothers").hide();
+                })
+            $("#PMScustom").click(function(){
+                $("#PMSaddcustom").show();
+                $("#PMScustom").hide();
+                $("#PMScustoms").show();
+                })
+            $("#PMScustoms").click(function(){
+                $("#PMSaddcustom").hide();
+                $("#PMScustom").show();
+                $("#PMScustoms").hide();
+                })
+        })
+        $(document).ready(function(){
+             $("#PMSstop").click(function(){
+                if($('[name=stop]').is(':checked'))
+                {
+                    alert("停用成功");
+                    $(".PMS-state").replaceWith("不可用");
+                  //- code
+                }
+                else
+                {
+                    alert("请选择停用仓库，谢谢!")
+                }
+                })
+           })
+        function PMSopen(){
+            window.open("add-warehouse.html","_blank","location=yes, scrollbars=yes, width=600, height=400,top=200,left=300")
+        }
+   

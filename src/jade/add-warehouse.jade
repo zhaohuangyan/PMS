@@ -67,4 +67,8 @@ block content
                         span.PMS-xing *
                         input(type="text",class="add-address",maxlength="90",placeholder="最大长度为90")          
             button(type="submit",class="add-btn1")提交
-            button(type="button",class="add-btn2")返回
+            button(type="button",class="add-btn2",onclick="addclose()")返回
+    script.
+        function addclose(){
+            window.close("add-warehouse.html")
+        }
