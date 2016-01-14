@@ -1,0 +1,273 @@
+extends templates/pms
+
+block vars
+
+block title
+  | PMS新增页面
+
+block styles
+
+block content
+    .all
+        h3 商家注册
+        h5.PMS-bt
+            | 基础信息设置
+        form(class="form-horizontal")
+            div.form-group
+                lable(for="exampleInputName2",class="col-sm-2 control-label")
+                    b 商家编码
+                        span.PMS-xing *
+                div.col-sm-3
+                    input(type="type",class="form-control" id="exampleInputName2" placeholder="建议为拼音首字母").PMS-input
+            div.form-group
+                lable(for="exampleInputName2",class="col-sm-2 control-label")
+                    b 商家名称
+                        span.PMS-xing *
+                div.col-sm-3
+                    input(type="type",class="form-control" id="exampleInputName2" placeholder="贵公司名字").PMS-input
+            div.form-group
+                lable(for="exampleInputName2",class="col-sm-2 control-label")
+                    b 商家全称
+                        span.PMS-xing *
+                div.col-sm-3
+                    input(type="type",class="form-control" id="exampleInputName2" placeholder="贵公司全称").PMS-input
+            div.form-group
+                lable(for="exampleInputName2",class="col-sm-2 control-label")
+                    b 短信模板名称
+                        span.PMS-xing &#160;
+                div.col-sm-3
+                    input(type="type",class="form-control" id="exampleInputName2").PMS-input
+            div.form-group
+                lable(for="exampleInputName2",class="col-sm-2 control-label")
+                    b 接货分拣中心
+                        span.PMS-xing *
+                div.col-sm-3
+                    select(class="form-control").PMS-select
+                        option 请选择
+                        option 请选择
+                        option 请选择
+            div.form-group
+                lable(for="exampleInputName2",class="col-sm-2 control-label")
+                    b 取货模式
+                        span.PMS-xing *
+                div.col-sm-3
+                    select(class="form-control").PMS-select
+                        option 请选择
+                        option 配送上自提
+                        option 商家送货上门
+                        option 其他
+            div.form-group
+                lable(for="exampleInputName2",class="col-sm-2 control-label")
+                    b 取货部门
+                        span.PMS-xing *
+                div.col-sm-3
+                    select(class="form-control").PMS-select
+                        option 请选择
+                        option 分拣中心
+                        option 配送站
+                div.col-sm-3
+                    select(class="form-control").PMS-select
+                        option 请选择
+                        option 分拣中心
+                        option 配送站
+            div.form-group
+                lable(for="exampleInputName2",class="col-sm-2 control-label")
+                    b 商家货物品类
+                        span.PMS-xing *
+                div.col-sm-3
+                    select(class="form-control").PMS-select
+                        option 请选择商品类别
+                        option 请选择商品类别
+                        option 请选择商品类别
+            div.form-group
+                lable(for="exampleInputName2",class="col-sm-2 control-label")
+                    b 商家类别
+                        span.PMS-xing *
+                div.col-sm-3
+                    select(class="form-control").PMS-select
+                        option 请选择
+                        option 项目模式
+                        option 快递模式
+                lable(for="exampleInputName2",class="col-sm-2 control-label",class="PMS-yuejie")
+                    b 月结编码
+                div.col-sm-3
+                    input(type="type",class="form-control" id="exampleInputName2").PMS-input
+        h5.PMS-bt
+            | 添加商家仓库
+            span.fa.fa-angle-double-down.fa-2x.PMS-img#PMS-addware
+            span.fa.fa-angle-double-up.fa-2x.PMS-imgs#PMS-addwares
+        div.table-responsive.PMS-addwarehouse#PMS-addwarehouse
+            div.PMS-add
+                div.PMS-addheader
+                    span.fa.fa-comments
+                    span.fa.fa-plus-square#PMSadd
+                        &#160;新增
+                    span.fa.fa-play
+                        &#160;启用
+                    span.fa.fa-pause#PMSstop
+                        &#160;停用 
+                    span.fa.fa-repeat
+                        &#160;返回
+                table.table.table-bordered.PMS-table
+                    //- tr
+                    //-     td(colspan="11")
+                    //-             span.fa.fa-comments
+                    //-             span.fa.fa-plus-square
+                    //-                 &#160;新增
+                    //-             span.fa.fa-play
+                    //-                 &#160;启用
+                    //-             span.fa.fa-pause
+                    //-                 &#160;停用
+                    //-             span.fa.fa-repeat
+                    //-                 &#160;返回
+                    tr 
+                        td 序号
+                        td 选择
+                        td 操作
+                        td 商家名称
+                        td 仓库编码
+                        td 仓库名称
+                        td 省份
+                        td 城市
+                        td 区县
+                        td 仓库地址
+                        td 启用状态
+                    tr.PMS-tr
+                        td 1
+                        td 
+                            input(type="checkbox",name="stop")
+                        td 
+                            a(href="") 修改
+                        td 拼多多
+                        td pddbjkf01
+                        td 北京库房
+                        td 北京
+                        td 北京市 
+                        td 西城区
+                        td 北京
+                        td.PMS-state 可用
+        h5.PMS-bt
+            | 系统数据设置
+            span.fa.fa-angle-double-down.fa-2x.PMS-img#PMS-data
+            span.fa.fa-angle-double-up.fa-2x.PMS-imgs#PMS-datas
+        div.PMS-addwarehouse#PMS-dataset
+            lable.checkbox-inline.PMS-lable
+                input(type="checkbox" id="inlineCheckbox1")
+                | 是否显示姓名 
+            lable.checkbox-inline.PMS-lable
+                input(type="checkbox" id="inlineCheckbox1") 
+                | 是否显示姓名 
+            br 
+            lable.checkbox-inline.PMS-lable
+                input(type="checkbox" id="inlineCheckbox1") 
+                | 是否显示姓名
+        h5.PMS-bt
+            | 其它设置
+            span.fa.fa-angle-double-down.fa-2x.PMS-img#PMS-other
+            span.fa.fa-angle-double-up.fa-2x.PMS-imgs#PMS-others
+        div.PMS-addwarehouse#PMS-otherset
+            lable.checkbox-inline.PMS-lable
+                input(type="checkbox" id="inlineCheckbox1") 
+                | 是否允许接口导入
+            lable.checkbox-inline.PMS-lable
+                input(type="checkbox" id="inlineCheckbox1")
+                | 预筛单模式
+            lable.checkbox-inline.PMS-lable
+                input(type="checkbox" id="inlineCheckbox1") 
+                | 是否运单号=订单号
+            br
+            lable.checkbox-inline.PMS-lable
+                input(type="checkbox" id="inlineCheckbox1") 
+                | 称重复核
+            lable.checkbox-inline.PMS-lable
+                input(type="checkbox" id="inlineCheckbox1")
+                | 是否直接出库
+            lable.checkbox-inline.PMS-lable
+                input(type="checkbox" id="inlineCheckbox1") 
+                | 是否在退货单打印菜单显示此商家
+        h5.PMS-bt
+            | 商家流程自定义
+            span.fa.fa-angle-double-down.fa-2x.PMS-img#PMS-lc
+            span.fa.fa-angle-double-up.fa-2x.PMS-imgs#PMS-lcs
+        div.PMS-addwarehouse#PMS-custom
+            lable.checkbox-inline.PMS-lable
+                input(type="checkbox" id="inlineCheckbox1") 
+                | 允许POS机刷卡
+            lable.checkbox-inline.PMS-lable
+                input(type="checkbox" id="inlineCheckbox1")
+                | 允许他人签收
+            lable.checkbox-inline.PMS-lable
+                input(type="checkbox" id="inlineCheckbox1")
+                | 允许开商品自身包装验货
+            lable.checkbox-inline.PMS-lable
+                input(type="checkbox" id="inlineCheckbox1") 
+                | 操作退货审核
+            br
+            lable.checkbox-inline.PMS-lable
+                input(type="checkbox" id="inlineCheckbox1") 
+                | 收集客户身份证后4位
+            lable.checkbox-inline.PMS-lable
+                input(type="checkbox" id="inlineCheckbox1")
+                | 允许开外包箱验货
+            lable.checkbox-inline.PMS-lable
+                input(type="checkbox" id="inlineCheckbox1") 
+                | 允许试用、试穿
+
+    script.
+        $(document).ready(function(){
+            $("#PMS-addware").click(function(){
+                $("#PMS-addwarehouse").show();
+                $("#PMS-addwares").show();
+                $("#PMS-addware").hide();
+                })
+            $("#PMS-addwares").click(function(){
+                $("#PMS-addwarehouse").hide();
+                $("#PMS-addware").show();
+                $("#PMS-addwares").hide();
+                })
+            $("#PMS-data").click(function(){
+                $("#PMS-dataset").show();
+                $("#PMS-datas").show();
+                $("#PMS-data").hide();
+                })
+            $("#PMS-datas").click(function(){
+                $("#PMS-dataset").hide();
+                $("#PMS-data").show();
+                $("#PMS-datas").hide();
+                })
+            $("#PMS-other").click(function(){
+                $("#PMS-otherset").show();
+                $("#PMS-others").show();
+                $("#PMS-other").hide();
+                })
+            $("#PMS-others").click(function(){
+                $("#PMS-otherset").hide();
+                $("#PMS-other").show();
+                $("#PMS-others").hide();
+                })
+            $("#PMS-lc").click(function(){
+                $("#PMS-custom").show();
+                $("#PMS-lcs").show();
+                $("#PMS-lc").hide();
+                })
+            $("#PMS-lcs").click(function(){
+                $("#PMS-custom").hide();
+                $("#PMS-lc").show();
+                $("#PMS-lcs").hide();
+                })
+            $("#PMSstop").click(function(){
+                if($('[name=stop]').is(':checked'))
+                {
+                    alert("停用成功")
+                    $(".PMS-state").replaceWith("不可用");
+                }
+                else
+                {
+                    alert("请选择停用仓库，谢谢!")
+                }
+                })
+            $("#PMSadd").click(function(){
+                window.open("b-PMSaddwarehouse.html","_black","width=800, height=400,top=200,left=200")
+                })
+        })
+    
