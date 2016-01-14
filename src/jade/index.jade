@@ -19,7 +19,8 @@ block content
             //.col-xs-9
             .PMS-right
                 h3 商家注册
-                p.PMS-bg 基础信息设置
+                p.PMS-bg 
+                    b 基础信息设置
                 p.PMS-jcxx 
                     b 商家编码
                     b.PMS-xing *
@@ -34,7 +35,7 @@ block content
                     input(type="text",placeholder="贵公司全称",class="PMS-input")
                 p 
                     b 短信模板名称
-                    b.PMS-xing *
+                    b.PMS-xing &#160; 
                     input(type="text",class="PMS-input")
                 p 
                     b 接货分拣中心
@@ -43,7 +44,7 @@ block content
                         option 请选择
                         option
                         option
-                p.PMS-jcxx 
+                p.PMS-jcxx
                     b 取货模式
                     b.PMS-xing *
                     select(class="PMS-select")
@@ -76,14 +77,16 @@ block content
                     span 
                         b 月结编码&#160;&#160; 
                         input(type="text",class="PMS-input")
-                .PMS-bg 添加商家仓库
+                .PMS-bg 
+                    b 添加商家仓库
                     span.fa.fa-angle-double-down.fa-2x.PMS-img#PMSaddshow
                     span.fa.fa-angle-double-up.fa-2x.PMS-imgs#PMSaddshows
                 div.PMS-addall#PMSadd
                     b 商家名称:拼多多
                     div.PMS-addk
                         div.PMS-add
-                            span.fa.fa-plus-square(onclick="PMSopen()",)
+                            span.fa.fa-comments
+                            span.fa.fa-plus-square(onclick="PMSopen()")
                                 &#160;新增
                             span.fa.fa-play(id="PMSstart")
                                 &#160;启用
@@ -108,7 +111,8 @@ block content
                                 td.PMS-td 1
                                 td.PMS-td 
                                     input(type="checkbox",name="stop")
-                                td.PMS-td 修改
+                                td.PMS-td 
+                                    a(href='add-warehouse.html') 修改
                                 td.PMS-td 拼多多
                                 td.PMS-td pddbjkf01
                                 td.PMS-td 北京库房
@@ -118,7 +122,8 @@ block content
                                 td.PMS-td 北京
                                 td.PMS-td.PMS-state 可用
                 br
-                .PMS-bg 系统数据设置
+                .PMS-bg 
+                    b 系统数据设置
                     span.fa.fa-angle-double-down.fa-2x.PMS-img#PMSshow
                     span.fa.fa-angle-double-up.fa-2x.PMS-imgs#PMSshows
                 div.PMS-addall#PMSname
@@ -135,7 +140,8 @@ block content
                                  input(type="checkbox",name="data")
                                  |是否显示姓名
                 br
-                .PMS-bg 其它设置
+                .PMS-bg 
+                    b 其它设置
                     span.fa.fa-angle-double-down.fa-2x.PMS-img#PMSother
                     span.fa.fa-angle-double-up.fa-2x.PMS-imgs#PMSothers
                 div.PMS-addall#PMSaddother
@@ -161,7 +167,8 @@ block content
                                 input(type="checkbox")
                                 |是否在退货单打印菜单显示此商家
                 br
-                .PMS-bg 商家流程自定义
+                .PMS-bg 
+                    b 商家流程自定义
                     span.fa.fa-angle-double-down.fa-2x.PMS-img#PMScustom
                     span.fa.fa-angle-double-up.fa-2x.PMS-imgs#PMScustoms
                 div.PMS-addall#PMSaddcustom
@@ -263,7 +270,6 @@ block content
                 {
                     alert("停用成功");
                     $(".PMS-state").replaceWith("不可用");
-                  //- code
                 }
                 else
                 {
@@ -272,6 +278,5 @@ block content
                 })
            })
         function PMSopen(){
-            window.open("add-warehouse.html","_blank","location=yes, scrollbars=yes, width=600, height=400,top=200,left=300")
+            window.open("add-warehouse.html","_blank","width=1000, height=400,top=200,left=200")
         }
-   
