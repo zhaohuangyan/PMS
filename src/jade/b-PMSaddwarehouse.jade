@@ -3,7 +3,7 @@ extends templates/pms
 block vars
 
 block title
-  | PMS新增页面
+  | pms新增页面
 
 block styles
 
@@ -12,43 +12,48 @@ block content
             div.form-group
                 lable(for="exampleInputName2",class="col-sm-2 control-label")
                     b 商家名称:
-                        span.PMS-xing *
+                        span.pms-xing *
                 div.col-sm-3
-                    拼多多
+                    h5 拼多多
             div.form-group
                 lable(for="exampleInputName2",class="col-sm-2 control-label")
                     b 仓库编码:
-                        span.PMS-xing *
+                        span.pms-xing *
                 div.col-sm-3
-                    input(type="type",class="form-control" id="exampleInputName2" placeholder="最大长度为20").PMS-input
+                    input(type="type",class="form-control" id="exampleInputName2" placeholder="最大长度为20").pms-input
             div.form-group
                 lable(for="exampleInputName2",class="col-sm-2 control-label")
                     b 仓库名称:
-                        span.PMS-xing *
+                        span.pms-xing *
                 div.col-sm-3
-                    input(type="type",class="form-control" id="exampleInputName2" placeholder="最大长度为50").PMS-input
+                    input(type="type",class="form-control" id="exampleInputName2" placeholder="最大长度为50").pms-input
             div.form-group
                 lable(for="exampleInputName2",class="col-sm-2 control-label")
                     b 省市区:
-                        span.PMS-xing *
+                        span.pms-xing *
                 div.col-sm-3
-                    select(class="form-control",id="province_Select").PMS-select
+                    select(class="form-control",id="province_Select").pms-select
                         option(selected="selected") --请选择--
                 div.col-sm-3
-                    select(class="form-control",id="Province_city").PMS-select
+                    select(class="form-control",id="Province_city").pms-select
                         option(selected="selected") --请选择--
                 div.col-sm-3
-                    select(class="form-control",id="Province_Area").PMS-select
+                    select(class="form-control",id="Province_Area").pms-select
                         option(selected="selected") --请选择--
             div.form-group
                 lable(for="exampleInputName2",class="col-sm-2 control-label")
                     b 仓库地址:
-                        span.PMS-xing *
+                        span.pms-xing *
                 div.col-sm-4
-                    input(type="type",class="form-control" id="exampleInputName2" placeholder="最大长度为90").PMS-input  
+                    input(type="type",class="form-control" id="exampleInputName2" placeholder="最大长度为90").pms-input  
             div.form-group
                 lable(for="exampleInputName2",class="col-sm-2 control-label")
                     input(class="btn btn-default btn btn-warning" type="submit" value="提交")
                 div.col-sm-3
-                    input(class="btn btn-default btn-primary" type="button" value="返回")
-
+                    input(class="btn btn-default btn-primary add-btn" type="button" value="返回")
+    script.
+        $(document).ready(function(){
+            $(".add-btn").click(function(){
+                window.close("b-PMSaddwarehouse.html")
+                })
+            })
