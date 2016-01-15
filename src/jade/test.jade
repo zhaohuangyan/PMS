@@ -1,0 +1,133 @@
+extends templates/pms
+
+block vars
+
+block title
+  | PMS
+
+block styles
+
+block content
+    .all
+        div.query-record
+            form.form-inline
+                div.form-group.query-zl
+                    lable(for="exampleInputName2")
+                    b 商家名称&nbsp;&nbsp;
+                    input(type="text" class="form-control" id="exampleInputName2")
+                div.form-group.query-zl
+                    lable(for="exampleInputName2")
+                    b 商家编码&nbsp;&nbsp;
+                    input(type="text" class="form-control" id="exampleInputName2")
+                div.form-group.query-zl
+                    lable(for="exampleInputName2")
+                    b 商家ID&nbsp;&nbsp;
+                    input(type="text" class="form-control" id="exampleInputName2")
+                br
+                div.form-group.query-zl
+                    b 批量操作&nbsp;&nbsp;
+                    a(href="", target="_blank") 下载模板
+                    lable(for="exampleInputName2")
+                    button(class="btn btn-default" type="button")选择文件
+                    lable(for="exampleInputName2")
+                    button(class="btn btn-success" type="button")导入
+                div.form-group.query-zl
+                    lable(for="exampleInputName2")
+                    b 所属配送商&nbsp;&nbsp;
+                    select(class="form-control").query-pss
+                        option 请选择
+                        option 请选择
+                        option 请选择
+                div.form-group.query-zl
+                    lable(class="checkbox-inline")
+                    b 状态&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    input(type="checkbox" id="inlineCheckbox1")
+                    |停用
+                    lable(for="exampleInputName2")
+                    button(class="btn btn-success" type="button")查询
+                    lable(for="exampleInputName2")
+                    button(class="btn btn-warning" type="button")导出
+            div.query-header
+                span.fa.fa-comments.pms-tb 
+                span.fa.fa-plus-square.pms-addbusiness
+                    &nbsp;新增
+                span.fa.fa-play.pms-startwarehouse
+                    &nbsp;启用
+                span.fa.fa-pause.pms-stopwarehouse
+                    &nbsp;停用
+            div.table-responsive
+                table.table.table-bordered
+                    tr
+                        td
+                            input(type="checkbox" id="inlineCheckbox1")
+                        td
+                            |修改
+                        td
+                            |添加商家仓库
+                        td
+                            |商家流程自定义
+                        td
+                            |商家ID
+                        td
+                            |商家编码
+                        td
+                            |商家名称
+                        td
+                            |取货部门
+                    tr.query-add
+                        td
+                            input(type="checkbox" id="inlineCheckbox1")
+                        td
+                            span.fa.fa-pencil
+                        td
+                            |添加商家仓库
+                        td
+                            |商家流程自定义
+                        td
+                            |5514030
+                        td
+                            |testaa
+                        td
+                            |testaa
+                        td
+                            |武清分拣中心
+                div.query-footer
+                    span 共找到
+                        a(href="http://", target="_blank") 123
+                        |条记录
+                        &nbsp;&nbsp;&nbsp;
+                    span 当前
+                        a(href="http://", target="_blank") 1
+                        /3页
+                        &nbsp;&nbsp;&nbsp;
+                    span
+                        |每页10条记录
+                        &nbsp;&nbsp;&nbsp;
+                    span
+                        |首页
+                        &nbsp;&nbsp;&nbsp;
+                    span
+                        |上一页
+                        &nbsp;&nbsp;&nbsp;
+                    spam
+                        |下一页
+                        &nbsp;&nbsp;&nbsp;
+                    span
+                        |末页
+                        &nbsp;&nbsp;&nbsp;
+                    span
+                        |前往第
+                        input(type="text" placeholder="1",class="query-dqys")
+                        |页
+                        &nbsp;&nbsp;&nbsp;
+                    span
+                        button(type="button")|go
+                        &nbsp;&nbsp;&nbsp;
+                    span
+                        |每页
+                        select
+                            option 5
+                            option 10 
+                            option 15
+                        |条记录

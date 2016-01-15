@@ -99,14 +99,14 @@ block content
         div.pms-addwarehouse#pms-addwarehouse
             div.table-responsive.pms-add
                 div.pms-addheader
-                    span.fa.fa-comments
-                    span.fa.fa-plus-square#pmsadd
+                    span.fa.fa-comments.pms-tb
+                    span.fa.fa-plus-square#pmsadd.pms-addbusiness
                         &nbsp;新增
-                    span.fa.fa-play
+                    span.fa.fa-play.pms-startwarehouse
                         &nbsp;启用
-                    span.fa.fa-pause#pmsstop
+                    span.fa.fa-pause#pmsstop.pms-stopwarehouse
                         &nbsp;停用
-                    span.fa.fa-repeat
+                    span.fa.fa-repeat.pms-return
                         &nbsp;返回
                 table.table.table-bordered
                     tr 
@@ -229,7 +229,7 @@ block content
             $("#pms-data").click(function(){
                 $("#pms-dataset").show();
                 $("#pms-datas").show();
-                $("#pms-data").hide();
+                $("#pms-data").hide(); 
                 })
             $("#pms-datas").click(function(){
                 $("#pms-dataset").hide();
@@ -261,6 +261,7 @@ block content
                 {
                     alert("停用成功")
                     $(".PMS-state").replaceWith("不可用");
+                    $(".PMS-state").css("vertical-align","middle")
                 }
                 else
                 {
