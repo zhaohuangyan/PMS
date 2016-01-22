@@ -1,0 +1,243 @@
+extends templates/pms
+
+block vars
+
+block title
+  | Merchant custom
+
+block styles
+
+block content
+    .all
+        h3 商家名称:上海凯淳实业有限公司
+        h5.pms-bt
+            | 商家流程自定义
+        div.pms-addwarehouse
+            div.row
+                div.col-xs-6.col-sm-3.pms-information
+                    form.form-inline
+                        lable
+                            | 配送优先级别
+                            select.form-control.pms-style
+                                option C级(正常)
+                                option B级(紧急)
+                                option A级(最紧急)
+                        br
+                        lable
+                            | 滞留几天退回
+                            select.form-control.pms-style
+                                option 等客服指令
+                                option 1天
+                                option 2天
+                                option 3天
+                                option 4天
+                                option 5天 
+                                option 6天 
+                                option 7天 
+                        br
+                        lable.checkbox-inline.pms-alignment
+                            input(type="checkbox" id="inlineCheckbox4")
+                            | 允许开外包箱验货
+                div.col-xs-6.col-sm-3.pms-information
+                    form.form-inline
+                        lable.checkbox-inline.pms-alignment
+                            input(type="checkbox" id="inlineCheckbox1").pms-alignment
+                            | 允许POS机刷卡
+                        br 
+                        br
+                        lable.checkbox-inline
+                            input(type="checkbox" id="inlineCheckbox1")
+                            |允许开商品自身包装验货
+                div.col-xs-6.col-sm-3.pms-information
+                    form.form-inline
+                        lable.checkbox-inline.pms-alignment
+                            input(type="checkbox" id="inlineCheckbox2") 
+                            | 允许他人签收
+                        br
+                        br
+                        lable.checkbox-inline
+                            input(type="checkbox" id="inlineCheckbox2")
+                            |允许试用、试穿
+                div.col-xs-6.col-sm-3.pms-information
+                    form.form-inline
+                        lable.checkbox-inline.pms-alignment
+                            input(type="checkbox" id="inlineCheckbox3") 
+                            | 收集客户身份证后4位
+                        br
+                        br
+                        lable.checkbox-inline
+                            input(type="checkbox" id="inlineCheckbox3")
+                            |操作退货审核
+        h5.pms-bt
+            | 发货商家信息类
+        div.pms-addwarehouse
+            div.row
+                div.col-xs-6.col-sm-3.pms-information
+                    form.form-inline.pms-weight
+                        lable
+                            | 商家企业性质
+                            select.form-control.pms-style
+                                option 1.国有
+                                option 2.合作
+                                option 3.合资
+                                option 4.独资
+                                option 5.集体
+                                option 6.私营
+                                option 7.个体工商户
+                                option 8.其他
+                        br
+                        div.form-group
+                            lable(for="exampleInputName2")业&nbsp;&nbsp;务&nbsp;&nbsp;&nbsp;类&nbsp;&nbsp;型
+                            select.form-control.pms-style
+                                option 快散件
+                                option 电商
+                                option 金融
+                                option O2O
+                                option 家购
+                                option 仓储
+                                option 其他
+                        br
+                        div.form-group
+                            lable(for="exampleInputName2")所&nbsp;&nbsp;属&nbsp;&nbsp;&nbsp;大&nbsp;&nbsp;区
+                            select.form-control.pms-style
+                                option 华北大区
+                        br
+                        div.form-group
+                            lable(for="exampleInputName2")发&nbsp;&nbsp;货&nbsp;&nbsp&nbsp;日&nbsp;&nbsp期
+                                input(type="date" id="datetimepicker" class="form-control").pms-style
+                        br
+                        div.form-group
+                            lable(for="exampleInputName2")合同签署日期
+                                input(type="date" class="form-control").pms-style
+                div.col-xs-6.col-sm-3.pms-information
+                    form.form-inline.pms-weight
+                        div.form-group
+                            lable(for="exampleInputName2")发&nbsp;&nbsp;货&nbsp;&nbsp;&nbsp;地&nbsp;&nbsp;区
+                            select.form-control.pms-style
+                                option 北京
+                        br
+                        div.form-group
+                            lable(for="exampleInputName2")商家客服电话
+                            input(type="text" class="form-control").pms-style
+                        br
+                        div.form-group
+                            lable(for="exampleInputName2")日均发货单量
+                            input(type="text" class="form-control").pms-style
+                        br
+                        div.form-group
+                            lable(for="exampleInputName2")合同执行日期
+                                input(type="date" class="form-control").pms-style
+                div.col-xs-6.col-sm-3.pms-information
+                    form.form-inline.pms-weight
+                        div.form-group
+                            lable(for="exampleInputName2")主营商品（发货品类）
+                            input(type="text" class="form-control").pms-style
+                        br
+                        div.form-group.pms-alignment
+                            |商品是否有商标、吊牌
+                            lable(class="radio-inline")
+                                input(type="radio" name="inlineRadioOptions")
+                                |是
+                            lable(class="radio-inline")
+                                input(type="radio" name="inlineRadioOptions")
+                                |否   
+        h5.pms-bt
+            | 结算信息类
+        div.pms-addwarehouse
+            div.row
+                div.col-xs-6.col-sm-3.pms-information
+                    form.form-inline
+                        div.form-group
+                            lable(for="exampleInputName2")保险费率
+                            input(type="text" class="form-control").pms-style
+                        br
+                        div.form-group
+                            lable(for="exampleInputName2")发票类型
+                            input(type="text" class="form-control").pms-style
+                        br
+                        div.form-group
+                            lable(for="exampleInputName2")结算周期
+                            input(type="text" class="form-control").pms-style
+                div.col-xs-6.col-sm-3.pms-information
+                    form.form-inline
+                        div.form-group
+                            lable(for="exampleInputName2")代收款手续费
+                            input(type="text" class="form-control").pms-style
+                        br
+                        div.form-group
+                            lable(for="exampleInputName2")保&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;函&nbsp;
+                            input(type="text" class="form-control").pms-style
+                div.col-xs-6.col-sm-3.pms-information
+                    form.form-inline
+                        div.form-group
+                            lable(for="exampleInputName2")返款周期
+                            input(type="text" class="form-control").pms-style
+                        br
+                        div.form-group
+                            lable(for="exampleInputName2")&nbsp;保&nbsp;证&nbsp;金&nbsp;
+                            input(type="text" class="form-control").pms-style
+        h5.pms-bt
+            | 商家登记信息类
+        div.pms-addwarehouse
+            div.row
+                div.col-xs-6.col-sm-3.pms-information
+                    form.form-inline
+                        div.form-group.pms-alignment
+                            |是否报备
+                            lable(class="radio-inline")
+                                input(type="radio" name="Report")
+                                |是
+                            lable(class="radio-inline")
+                                input(type="radio" name="Report")
+                                |否  
+                        br
+                        br
+                        div.form-group
+                            |是否计提
+                            lable(class="radio-inline")
+                                input(type="radio" name="Accrued")
+                                |是
+                            lable(class="radio-inline")
+                                input(type="radio" name="Accrued")
+                                |否  
+                        br
+                        div.form-group
+                            lable(for="exampleInputName2")提成比例
+                            input(type="text" class="form-control").pms-style
+                div.col-xs-6.col-sm-3.pms-information
+                    form.form-inline
+                        div.form-group
+                            lable(for="exampleInputName2")提成开始时间
+                                input(type="date" class="form-control").pms-style
+                        br
+                        div.form-group
+                            lable(for="exampleInputName2")提成结束时间
+                            input(type="date" class="form-control").pms-style
+        form.form-inline.pms-file
+            div.form-group
+                div.input-group
+                    div.input-group-addon 选择文件
+                    input(type="text" class="form-control pms-juli" id="exampleInputAmount" placeholder="未选中任何文件")
+            div.form-group
+                div.input-group
+                    input(type="text" class="form-control pms-juli" id="exampleInputAmount" placeholder="标题：")
+                    div.input-group-addon
+                        i.fa.fa-plus
+                    div.input-group-addon
+                        i.fa.fa-remove
+        form.form-inline.pms-file
+            div.form-group
+                div.input-group
+                    div.input-group-addon 选择文件
+                    input(type="text" class="form-control pms-juli" id="exampleInputAmount" placeholder="未选中任何文件")
+            div.form-group
+                div.input-group
+                    input(type="text" class="form-control pms-juli" id="exampleInputAmount" placeholder="标题：")
+                    div.input-group-addon
+                        i.fa.fa-plus
+                    div.input-group-addon
+                        i.fa.fa-remove
+
+
+        button(type="button" class="btn btn-warning pms-btn1")保存
+        button(type="button" class="btn btn-primary pms-btn2")返回

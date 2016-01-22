@@ -1,0 +1,279 @@
+extends templates/pms
+
+block vars
+
+block title
+  | Query page
+
+block styles
+
+block content
+    .all
+        h3 商家名称:上海凯淳实业有限公司
+        button.btn.btn-default 基础设置
+        button.btn.btn-default 商家自定义
+        h5.pms-bt
+            | 基础信息设置
+        form(class="form-horizontal")
+            div.form-group
+                lable(for="exampleInputName2",class="col-sm-2 control-label")
+                    b 商家编码
+                        span.pms-xing *
+                div.col-sm-3
+                    input(type="type",class="form-control" id="exampleInputName2" placeholder="建议为拼音首字母").pms-input
+            div.form-group
+                lable(for="exampleInputName2",class="col-sm-2 control-label")
+                    b 商家名称
+                        span.pms-xing *
+                div.col-sm-3
+                    input(type="type",class="form-control" id="exampleInputName2" placeholder="贵公司名字").pms-input
+            div.form-group
+                lable(for="exampleInputName2",class="col-sm-2 control-label")
+                    b 商家全称
+                        span.pms-xing *
+                div.col-sm-3
+                    input(type="type",class="form-control" id="exampleInputName2" placeholder="贵公司全称").pms-input
+            div.form-group
+                lable(for="exampleInputName2",class="col-sm-2 control-label")
+                    b 短信模板名称
+                        span.pms-xing &nbsp;
+                div.col-sm-3
+                    input(type="type",class="form-control" id="exampleInputName2").pms-input
+            div.form-group
+                lable(for="exampleInputName2",class="col-sm-2 control-label")
+                    b 接货分拣中心
+                        span.pms-xing *
+                div.col-sm-3
+                    select(class="form-control").pms-select
+                        option 请选择
+                        option 请选择
+                        option 请选择
+            div.form-group
+                lable(for="exampleInputName2",class="col-sm-2 control-label")
+                    b 取货模式
+                        span.pms-xing *
+                div.col-sm-3
+                    select(class="form-control").pms-select
+                        option 请选择
+                        option 配送上自提
+                        option 商家送货上门
+                        option 其他
+            div.form-group
+                lable(for="exampleInputName2",class="col-sm-2 control-label")
+                    b 取货部门
+                        span.pms-xing *
+                div.col-sm-3
+                    select(class="form-control").pms-select
+                        option 请选择
+                        option 分拣中心
+                        option 配送站
+                div.col-sm-3
+                    select(class="form-control").pms-select
+                        option 请选择
+                        option 分拣中心
+                        option 配送站
+            div.form-group
+                lable(for="exampleInputName2",class="col-sm-2 control-label")
+                    b 商家货物品类
+                        span.pms-xing *
+                div.col-sm-3
+                    select(class="form-control").pms-select
+                        option 请选择商品类别
+                        option 请选择商品类别
+                        option 请选择商品类别
+            div.form-group
+                lable(for="exampleInputName2",class="col-sm-2 control-label")
+                    b 商家类别
+                        span.pms-xing *
+                div.col-sm-3
+                    select(class="form-control").pms-select
+                        option 请选择
+                        option 项目模式
+                        option 快递模式
+                lable(for="exampleInputName2",class="col-sm-2 control-label",class="PMS-yuejie")
+                    b 月结编码
+                div.col-sm-3
+                    input(type="type",class="form-control" id="exampleInputName2").pms-input
+        h5.pms-bt
+            | 添加商家仓库
+        div.pms-addwarehouse
+            div.table-responsive.pms-add
+                div.pms-addheader
+                    span.fa.fa-comments.pms-tb
+                    span.fa.fa-plus-square.pms-addbusiness
+                        &nbsp;新增
+                    span.fa.fa-play.pms-startwarehouse
+                        &nbsp;启用
+                    span.fa.fa-pause.pms-stopwarehouse
+                        &nbsp;停用
+                    span.fa.fa-repeat.pms-return
+                        &nbsp;返回
+                table.table.table-bordered
+                    tr
+                        td 序号
+                        td 选择
+                        td 操作
+                        td 商家名称
+                        td 仓库编码
+                        td 仓库名称
+                        td 省份
+                        td 城市
+                        td 区县
+                        td 仓库地址
+                        td 启用状态
+                    tr.pms-business
+                        td 1
+                        td 
+                            input(type="checkbox",name="stop")
+                        td 
+                            a(href="") 修改
+                        td 拼多多
+                        td pddbjkf01
+                        td 北京库房
+                        td 北京
+                        td 北京市 
+                        td 西城区
+                        td 北京
+                        td.PMS-state 可用
+        h5.pms-bt
+            | 联系人信息
+        div.pms-addwarehouse
+            div.table-responsive
+                table.table.table-bordered.pms-table
+                    tr
+                        td
+                            |维度
+                        td
+                            |联系人备注信息（哪个维度/职务）
+                        td
+                            |姓名
+                        td
+                            |电话
+                        td
+                            |手机
+                        td
+                            |邮箱
+                    tr
+                        td
+                            |配送商
+                        td
+                            span.pms-xing *&nbsp;
+                            |&nbsp;&nbsp;&nbsp;市场洽谈人&nbsp;&nbsp;&nbsp;&nbsp;
+                        td
+                        td
+                        td
+                        td
+                    tr
+                        td
+                            |配送商
+                        td
+                            span.pms-xing *&nbsp;
+                            |&nbsp;&nbsp;&nbsp;项目联系人&nbsp;&nbsp;&nbsp;&nbsp;
+                        td
+                        td
+                        td
+                        td
+                    tr
+                        td
+                            |商家
+                        td
+                            span.pms-xing *&nbsp;
+                            |商家项目联系人
+                        td
+                        td
+                        td
+                        td
+                    tr
+                        td
+                            |配送商
+                        td
+                            |技术对接人
+                        td
+                        td
+                        td
+                        td
+                    tr
+                        td
+                            |商家
+                        td
+                            |技术对接人
+                        td
+                        td
+                        td
+                        td
+                    tr
+                        td
+                            |商家
+                        td
+                            |财务联系人
+                        td
+                        td
+                        td
+                        td
+                    tr
+                        td
+                            |配送商
+                        td
+                            |财务联系人
+                        td
+                        td
+                        td
+                        td
+        h5.pms-bt
+            |信息安全设置
+        div.pms-addwarehouse
+            div.row
+                div.col-xs-6.col-sm-3.pms-information
+                    form.form-inline
+                        lable.checkbox-inline.pms-alignment
+                            input(type="checkbox" id="inlineCheckbox4")
+                            | 是否显示姓名
+                        br
+                        lable.checkbox-inline
+                            input(type="checkbox" id="inlineCheckbox4")
+                            | 是否显示地址
+                div.col-xs-6.col-sm-3.pms-information
+                    form.form-inline
+                div.col-xs-6.col-sm-3.pms-information
+                    form.form-inline
+                        lable.checkbox-inline.pms-alignment
+                            input(type="checkbox" id="inlineCheckbox1")
+                            | 是否显示电话 
+                div.col-xs-6.col-sm-3.pms-information
+                    form.form-inline
+                        div.form-group
+                            lable(for="exampleInputName2")商家银行账号
+                            input(type="text" class="form-control" maxlength="19").pms-style
+        h5.pms-bt
+            | 商家系统对接设置
+        div.pms-addwarehouse
+            div.row
+                div.col-xs-6.col-sm-3.pms-information
+                    form.form-inline
+                        lable.checkbox-inline
+                            input(type="checkbox" id="inlineCheckbox1")
+                            | 是否允许接口导入 
+                        br
+                        lable.checkbox-inline
+                            input(type="checkbox" id="inlineCheckbox1")
+                            |使用EDS行程单系统
+                div.col-xs-6.col-sm-3.pms-information
+                    form.form-inline
+                        lable.checkbox-inline
+                            input(type="checkbox" id="inlineCheckbox2") 
+                            | 预筛单模式
+                div.col-xs-6.col-sm-3.pms-information
+                    form.form-inline
+                        lable.checkbox-inline
+                            input(type="checkbox" id="inlineCheckbox3") 
+                            | 是否直接出库
+                div.col-xs-6.col-sm-3.pms-information
+                    form.form-inline
+                        lable.checkbox-inline
+                            input(type="checkbox" id="inlineCheckbox3") 
+                            | 是否运单号=订单号
+                div.col-xs-6.col-sm-3.pms-information
+                    form.form-inline
+                        lable.checkbox-inline
+                            input(type="checkbox" id="inlineCheckbox3") 
+                            | 称重复核
